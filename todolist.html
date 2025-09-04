@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1><a href="todolist.html">1. to do list</a></h1>
+    <input type="text" 
+    id=" taslinput"
+    placeholder="add a task"
+    />
+    <button oneclick="addTask()">add</button>
+
+    <script>
+        function addtask(){
+            var taskInput = document.getElementById('taskInput');
+            console.log(taskInput.value);
+        }
+    </script>
+</body>
+</html>
