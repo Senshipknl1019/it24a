@@ -11,13 +11,24 @@
     id=" taslinput"
     placeholder="add a task"
     />
-    <button oneclick="addTask()">add</button>
+    <button oneclick="addtask()">add</button>
 
     <script>
         function addtask(){
-            var taskInput = document.getElementById('taskInput');
-            console.log(taskInput.value);
+            gettasktext();
         }
+
+        function gettasktext(){
+            const input = document.getElementById('taskInput');
+            const text = inpute.value.trim();
+
+            
+            console.log("gettasktext() called: " + input.value);
+            return{text,input}
+
+
+        }
+        
     </script>
 </body>
 </html>
