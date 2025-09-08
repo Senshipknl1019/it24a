@@ -9,13 +9,22 @@
     <h1><a href="todolist.html">1. To Do List</a></h1>
 
     <input type="text" 
-        id="taskInput"  <!-- FIXED -->
-        placeholder="Add a task" />
+        id = "taskInput"  <!-- FIXED -->
+        placeholder="Add a task"/>
 
     <button onclick="addTask()">Add</button> <!-- FIXED -->
+    <ul id = "tasklist">your task goes here.. </ul>
 
     <script>
         function addTask() {
+
+        function addtaskitem(taskText) {
+            const li = document.createElement("li")
+            li.textContent = taskText;
+            document.getelementbyid("tasklist")
+        }
+
+            
             const { text, input } = getTaskText();
             console.log("Task added:", text); // Optional, to confirm task
         }
@@ -26,6 +35,13 @@
 
             console.log("getTaskText() called: " + input.value);
             return { text, input }; // FIXED formatting
+        }
+        function addTaskItem(tasktest) {
+            const li = document.CreateElement("li");
+            li.textContent = tasktest; 
+
+            document.getElementById("tasklist").appendchild(li);
+            console.log ("addtaskitem() called ->:", taskText, date());
         }
     </script>
 </body>
