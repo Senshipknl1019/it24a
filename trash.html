@@ -29,6 +29,21 @@
       taskList.appendChild(li);
 
       input.value = ""; // Clear the input field
+
+      function createdeletebutton(li){
+        const deletebutton = document.createelement("button");
+
+        deletebtn.textcontent="X";
+        deletebtn.classname="delete=btn";
+        deletebtn.onclick = () => handledeleteclick(li);
+
+        console.log("createdeletebutton() called ->", li.textcontent);
+        return deletebtn;
+      }
+      function handledeleteclick(li){
+        li.remove();
+        console.log("")
+      }
     }
   </script>
 </body>
