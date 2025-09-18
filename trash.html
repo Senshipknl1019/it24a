@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+</head>
+<body>
+  <h1><a href="todolist.html">1. To Do List</a></h1>
+
+  <input type="text" id="taskInput" placeholder="Add a task" />
+  <button onclick="addTask()">Add</button>
+
+  <ul id="tasklist">
+    <li>your task goes here..</li>
+  </ul>
+
+  <script>
+    function addTask() {
+      const input = document.getElementById('taskInput');
+      const text = input.value.trim();
+
+      if (text === "") return; // Skip if input is empty
+
+      const taskList = document.getElementById("tasklist");
+
+      const li = document.createElement("li");
+      li.textContent = text;
+      taskList.appendChild(li);
+
+      input.value = ""; // Clear the input field
+
+      function createdeletebutton(li){
+        const deletebutton = document.createelement("button");
+
+        deletebtn.textcontent="X";
+        deletebtn.classname="delete=btn";
+        deletebtn.onclick = () => handledeleteclick(li);
+
+        console.log("createdeletebutton() called ->", li.textcontent);
+        return deletebtn;
+      }
+      function handledeleteclick(li){
+        li.remove();
+        console.log("")
+      }
+    }
+  </script>
+</body>
+</html>
